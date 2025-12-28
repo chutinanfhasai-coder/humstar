@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Confession</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#ffe1ec, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.instruction {
+    position: absolute;
+    top: 40px;
+    font-size: 20px;
+    color: #c04a6a;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart {
+    width: 120px;
+    margin-bottom: -40px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.heart img {
+    width: 100%;
+}
+
+.card {
+    width: 480px;
+    background: white;
+    padding: 50px 45px;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.card h1 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.sign {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.open .heart {
+    transform: scale(0.9);
+}
+
+.open .card {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<p class="instruction">Click the heart!</p>
+
+<div class="wrapper" id="box">
+    <div class="heart" onclick="openCard()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg">
+    </div>
+
+    <div class="card">
+        <h1>Dear Princess,</h1>
+
+        <p>
+           ไม่มีไรให้ลองดูเฉยๆยังไม่เสร็จ ยากชิบบบ.
+        </p>
+
+        <p>
+            อ๊ากกกกกกกกกกกกกกกกกกกกกกกกกกกก
+        </p>
+
+        <div class="sign">
+            <p><b>รักนาจ้าา,</b><br>ผัวพี่เอง</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function openCard() {
+    document.getElementById("box").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
